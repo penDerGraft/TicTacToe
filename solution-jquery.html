@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Tic-Tac-Toe Game</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script src="ttt-jquery.js"></script>
+		<style type="text/css">
+		 .red {
+		 	color: red;
+		 }
+		 .blue {
+		 	color: blue;
+		 }
+
+		</style>
+	</head>
+	<body>
+		<h1 style="text-align:center; width:280px;">Tic-Tac-Toe</h1>
+
+		<img src="blank.png" width="75" height="71" id="0square" style="position:absolute; left:10px; top:65px; z-index:1" />
+		<img src="blank.png" width="75" height="71" id="1square" style="position:absolute; left:110px; top:65px; z-index:1" />
+		<img src="blank.png" width="75" height="71" id="2square" style="position:absolute; left:210px; top:65px; z-index:1" />
+		<img src="blank.png" width="75" height="71" id="3square" style="position:absolute; left:10px; top:165px; z-index:1" />
+		<img src="blank.png" width="75" height="71" id="4square" style="position:absolute; left:110px; top:165px; z-index:1" />
+		<img src="blank.png" width="75" height="71" id="5square" style="position:absolute; left:210px; top:165px; z-index:1" />
+		<img src="blank.png" width="75" height="71" id="6square" style="position:absolute; left:10px; top:265px; z-index:1" />
+		<img src="blank.png" width="75" height="71" id="7square" style="position:absolute; left:110px; top:265px; z-index:1" />
+		<img src="blank.png" width="75" height="71" id="8square" style="position:absolute; left:210px; top:265px; z-index:1" />
+
+		<img src="board.png" id="gameBoard" width="270" height="270"  
+		 style="position:absolute; left:10px; top:65px; z-index:0" />
+		 
+		<p id="turnInfo" style="text-align:center; width:280px; position:absolute; left:5px; top:350px; z-index:1" >
+		TURN INFO
+		</p>
+
+		<form>
+			<input type="button" value="New Game" id="newgame" 
+				style="position:absolute; left:100px; top:400px; z-index:1"/>
+		</form>
+		<div style="position:absolute; left:20px; top:450px; z-index:1">
+			<span>Player Wins:<span id="user-wins"> 0</span></span>
+			<span style="margin-left: 35px;">Computer Wins:<span id="comp-wins"> 0</span></span>
+		</div>
+
+		<audio id="lose">
+		  <source src="lose.wav" type="audio/wav" preload="auto">
+		</audio>
+
+		<audio id="win">
+		  <source src="cheer.wav" type="audio/wav" preload="auto">
+		</audio>
+	</body>
+</html>
